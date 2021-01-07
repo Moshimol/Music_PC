@@ -1,6 +1,14 @@
 <template>
-  <div id="app">
-  </div>
+  <el-container id="app" class="container">
+    <el-header height="80px">
+
+    </el-header>
+
+    <!--  主要的显示  -->
+    <el-main>
+
+    </el-main>
+  </el-container>
 </template>
 
 <script>
@@ -8,17 +16,20 @@
 export default {
   name: 'App',
   components: {
+  },
+  computed:{
+
+  },
+  methods:{
+
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.container {
+  height: 100%;
+}
+.layout {
+  min-height: calc(100vh - 80px - 40px);
 }
 </style>
