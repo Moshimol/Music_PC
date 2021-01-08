@@ -1,10 +1,12 @@
 <template>
   <el-container id="app" class="container">
-    <el-header height="80px">
 
+    <!--  头部的显示  -->
+    <el-header height="80px">
+      <my-header></my-header>
     </el-header>
 
-    <!--  主要的显示  -->
+    <!--    主体显示-->
     <el-main>
 
     </el-main>
@@ -13,9 +15,12 @@
 
 <script>
 
+import myHeader from './components/common/header.vue'
+
 export default {
   name: 'App',
   components: {
+    myHeader,
   },
   computed:{
 

@@ -3,9 +3,17 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter)
 
-const routers = [
-    {path:'/',redirect:'/index'}
-
+const routes = [
+    {path:'/',redirect:'/index'},
+    {path: '/index', name: 'index', component: resolve => { require(['@views/index/index.vue'], resolve) }}
 ]
 
-export default  routers
+const router = new VueRouter({
+    mode: 'history',
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+    },
+    routes
+})
+
+export default  router
